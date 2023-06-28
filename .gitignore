@@ -1,0 +1,3 @@
+scripts/ford/*.txt
+scripts/*_cache
+scripts/*/modules/__pycache__
