@@ -1,4 +1,4 @@
-from modules.script_helpers import *
+from modules.suzuki_script_helpers import *
 pricefile = 'suzuki_at.txt'
 
 cols = ['pn', 'price']

@@ -74,6 +74,7 @@ def drop_duplicates(pricefile):
     if isinstance(pricefile, pd.DataFrame):
         pricefile = pricefile.sort_values('price', ascending=False)
         pricefile.drop_duplicates(subset=['pn'], keep='first', inplace=True)
+        pricefile =  pricefile.reset_index(drop=True)
     return pricefile
 
 

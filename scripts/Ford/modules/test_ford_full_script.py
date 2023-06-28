@@ -1,4 +1,4 @@
-import script_helpers as helpers
+import ford_script_helpers as helpers
 import pandas as pd
 
 def data_frame_creator(data, correct_data):
@@ -88,12 +88,13 @@ def test_full_ford_at_script():
 
     sample_df, correct_df = data_frame_creator(data, correct_data)
     sample_df = helpers.strange_characters_replace(sample_df)
+    sample_df = helpers.delete_string_price_rows(sample_df, 'no price')
     sample_df = helpers.drop_pn_null_values(sample_df)
     sample_df = helpers.delete_zero_price_rows(sample_df)
     sample_df = helpers.remove_chain_without_price(sample_df)
     sample_df = helpers.blank_ss_while_same_as_pn(sample_df)
     sample_df = helpers.delete_empty_price_rows(sample_df)
-    sample_df = helpers.delete_string_price_rows(sample_df, 'no price')
+
     print(sample_df)
     print(correct_df)
     
