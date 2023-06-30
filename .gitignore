@@ -1,3 +1,4 @@
 scripts/*/*.txt
+scripts/*/*.csv
 scripts/*_cache
 scripts/*/modules/__pycache__
